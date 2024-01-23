@@ -1,4 +1,31 @@
 <div class="p-3 mt-3 ">
-    <app-sidebar></app-sidebar>
+  <app-sidebar></app-sidebar>
 </div>
-<p>note-liste works!</p>
+<div class="p-5">
+  <table class="table table-hover">
+    <thead class="table-dark ">
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th *ngIf="!isNote1()">Note</th>
+        <th *ngIf="!isNote2()">Note2</th>
+        <th *ngIf="!isExamen()">Examen</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes">
+        <td>{{note.nom}}</td>
+        <td>{{note.prenom}}</td>
+        <td *ngIf="!isNote1()">{{note.note1}}</td>
+        <td *ngIf="!isNote2()">{{note.note2}}</td>
+        <td *ngIf="!isExamen()">{{note.examen}}</td>
+        <td>
+          <button type="button" class="btn btn-success">
+            Editer
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

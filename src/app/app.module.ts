@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SidebarComponent } from './composant/sidebar/sidebar.component';
 import { NoteListeComponent } from './pages/note-liste/note-liste.component';
 import { NoteAddComponent } from './pages/note-add/note-add.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NoteAddComponent } from './pages/note-add/note-add.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
