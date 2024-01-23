@@ -8,6 +8,8 @@ import { SidebarComponent } from './composant/sidebar/sidebar.component';
 import { NoteListeComponent } from './pages/note-liste/note-liste.component';
 import { NoteAddComponent } from './pages/note-add/note-add.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NoteEditeComponent } from './pages/note-edite/note-edite.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SidebarComponent,
     NoteListeComponent,
-    NoteAddComponent
+    NoteAddComponent,
+    NoteEditeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

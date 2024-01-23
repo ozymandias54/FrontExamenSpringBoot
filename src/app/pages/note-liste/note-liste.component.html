@@ -21,7 +21,7 @@
         <td *ngIf="!isNote2()">{{note.note2}}</td>
         <td *ngIf="!isExamen()">{{note.examen}}</td>
         <td>
-          <button type="button" class="btn btn-success">
+          <button type="button" class="btn btn-success" (click)="update(note.idNote||1)">
             Editer
           </button>
         </td>

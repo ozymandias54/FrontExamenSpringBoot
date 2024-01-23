@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Etudiant } from 'src/app/models/etudiant';
 import { Note } from 'src/app/models/note';
 import { EtudiantService } from 'src/app/service/etudiant.service';
@@ -15,6 +16,7 @@ export class NoteListeComponent implements OnInit {
 
   constructor(
     private noteService: NoteService,
+    private router:Router
   ) {}
 
   get() {
@@ -62,6 +64,10 @@ export class NoteListeComponent implements OnInit {
       return true;
     }
     return false;
+  }
+
+  update(id:number){
+    this.router.navigate(['update',id]);
   }
 
 
