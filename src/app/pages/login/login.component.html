@@ -6,18 +6,18 @@
         <div
             class="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center ">
             <div class="w-50 ">
-                <form >
+                <form (ngSubmit)="onSubmit()">
                     <h2 class="fw-bold text-secondary ">Gestion de note</h2>
                    <br>
                     <span class="fs-5 fw-semibold fst-italic">Connexion</span>
                     <hr>
                     <div class="d-flex  flex-column ">
                         <label class="fw-bold py-2">UserName</label>
-                        <input type="text" name="username" class="form-control py-3 rounded-4" />
+                        <input type="text" name="username" [(ngModel)]="username" class="form-control py-3 rounded-4" />
                     </div>
                     <div class="d-flex  flex-column ">
                         <label class="fw-bold py-2">Password</label>
-                        <input type="password" name="username" class="form-control py-3 rounded-4" />
+                        <input type="password" name="username" [(ngModel)]="password" class="form-control py-3 rounded-4" />
                     </div>
                     <button class="btn mt-3 bg-dark w-100 py-3 text-white fw-bold" type="submit">
                         Connexion

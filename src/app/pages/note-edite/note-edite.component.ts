@@ -12,6 +12,8 @@ export class NoteEditeComponent implements OnInit {
 
   note: Note = new Note();
   id: number = 1;
+  mnote2?:number;
+  mexamen?:number;
 
   constructor(
     private noteService: NoteService,
@@ -20,14 +22,14 @@ export class NoteEditeComponent implements OnInit {
   ) {}
 
   isNote2() {
-      if (this.note.note2 != null) {
+      if (this.mnote2 != null) {
         return true;
       }
       return false;
   }
 
   isExamen() {
-    if (this.note.examen != null) {
+    if (this.mexamen != null) {
       return true;
     }
     return false;
@@ -49,6 +51,8 @@ onSubmit(){
     this.noteService.getNote(this.id).subscribe(
       (data) => {
         this.note = data;
+        this.mnote2=data.note1;
+        this.mexamen=data.examen;
       },
       (error) => console.log(error)
     );

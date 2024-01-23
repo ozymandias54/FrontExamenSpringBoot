@@ -21,7 +21,7 @@ export class NoteListeComponent implements OnInit {
 
   get() {
     this.noteService.getNotes().subscribe((data) => {
-      this.notes = data;
+      this.notes = data.filter(d => d.idModule == 1);
       console.log(this.notes);
     });
   }
