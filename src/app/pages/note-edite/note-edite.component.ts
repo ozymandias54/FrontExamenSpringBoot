@@ -39,9 +39,12 @@ onSubmit(){
   this.noteService.updateNote(this.id, this.note).subscribe(
     (response) => {
       console.log(response);
-      this.router.navigate(['/notes']);
+     
     },
-    (error) => console.log(error)
+    (error) => {console.log(error)},
+    ()=>{
+      this.router.navigate(['/notes']);
+    }
   );
 }
 
@@ -51,7 +54,7 @@ onSubmit(){
     this.noteService.getNote(this.id).subscribe(
       (data) => {
         this.note = data;
-        this.mnote2=data.note1;
+        this.mnote2=data.note2;
         this.mexamen=data.examen;
       },
       (error) => console.log(error)

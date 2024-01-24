@@ -30,7 +30,7 @@ export class NoteAddComponent implements OnInit {
   soumit():void{
     for (let index = 0; index < this.notes.length; index++) {
       let note=this.notes[index];
-      this.noteService.updateNote(note.idNote ,note).subscribe(response => {
+      this.noteService.updateNote(note.idNote ,note).subscribe((response) => {
         console.log(response);
         this.router.navigate(['/notes']);
       });

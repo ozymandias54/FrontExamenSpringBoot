@@ -26,6 +26,15 @@
           </button>
         </td>
       </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td *ngIf="!isNote1()"></td>
+        <td *ngIf="!isNote2()"><button class="btn btn-danger" (click)="suppNote2()">Supprimer</button></td>
+        <td *ngIf="!isExamen()"><button class="btn btn-danger" (click)="suppExamen()">Supprimer</button></td>
+        <td>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
