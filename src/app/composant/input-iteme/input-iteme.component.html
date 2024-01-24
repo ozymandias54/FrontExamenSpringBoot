@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between py-3 border-bottom ">
+    <label for="etudiant{{etudiant.idEtudiant}}">{{etudiant.nom}}
+        {{etudiant.prenom}}</label>
+    <input type="number" name="note" id="etudiant{{etudiant.idEtudiant}}"
+        class="form-control w-50 bg-body-secondary " />
+    <input type="hidden" name="id" value="{{etudiant.idEtudiant}}" />
+    <input type="hidden" name="nom" value="{{etudiant.nom}}" />
+    <input type="hidden" name="prenom" value="{{etudiant.prenom}}" />
+</div>

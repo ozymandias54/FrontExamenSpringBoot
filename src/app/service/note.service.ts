@@ -20,7 +20,7 @@ export class NoteService {
   insert(data: Note): Observable<any> {
     return this.http.post("http://localhost:8080/note/create", data);
   }
-  updateNote(id: number, Note:Note): Observable<any>{
+  updateNote(id: number|undefined, Note:Note): Observable<any>{
     return this.http.put(`http://localhost:8080/note/update/${id}`, Note);
   }
   deleteNote(id:number): Observable<any>{

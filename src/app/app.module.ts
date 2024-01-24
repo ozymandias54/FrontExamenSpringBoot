@@ -10,6 +10,7 @@ import { NoteAddComponent } from './pages/note-add/note-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NoteEditeComponent } from './pages/note-edite/note-edite.component';
 import { FormsModule } from '@angular/forms';
+import { InputItemeComponent } from './composant/input-iteme/input-iteme.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     NoteListeComponent,
     NoteAddComponent,
     NoteEditeComponent,
+    InputItemeComponent,
   ],
   imports: [
     BrowserModule,

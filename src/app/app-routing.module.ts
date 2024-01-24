@@ -7,6 +7,7 @@ import { NoteEditeComponent } from './pages/note-edite/note-edite.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'notes',component:NoteListeComponent},
   {path:'addnote',component:NoteAddComponent},
   {path:'update/:id',component:NoteEditeComponent}
